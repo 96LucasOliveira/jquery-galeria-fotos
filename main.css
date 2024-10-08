@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Adicionando cor ao cabeçalho */
+header{
+    background-color: #5f27cd;
+    padding: 16px 0; /*espaçamento*/
+    color: #fff;
+    display: flex;
+    border-bottom: 16px solid #341f97; /*borda em baixo do cabeçalho*/
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+/*espaçamento entre o titulo e o botão*/
+header button {
+    margin-left: 16px;
+}
+
+/*estilizando o formulario*/
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none; /*esconder o formulário*/
+}
+
+/*espaçamento titulo do formulario*/
+form h2 {
+    margin-bottom: 16px;
+}
+
+/*espaçamento entre os botões*/
+input,
+button{
+    padding: 8px;
+}
+
+/*estilizando o botão*/
+button {
+    background-color: #009432;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer; /*troca o cursor do mouse*/
+}
+
+/*chamando o botão cancelar pela ide criada no html*/
+#botao-cancelar{
+    background-color: red;
+}
+
+/*estiliziando lista*/
+ul {
+    display: flex; /*elementos fiquem um ao lado do outro*/
+    flex-wrap: wrap; /*criar nova linha após ocupar a tela*/
+}
+
+ul li {
+    max-width: 25%; /*largura da lista*/
+    list-style: none; /*remover elemento referente a lista/ 'pontinho' */
+    position: relative;
+    max-height: 280px;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100% ; /* largura das imagens na lista*/
+}
+
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .7s; /*efeito de aparecer e desaparecer o link*/
+}
+
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link{
+    opacity: 1; /*efeito para o link aparecer quando passar o mouse*/
+}
